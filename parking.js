@@ -1,5 +1,33 @@
 const whereCanIPark = function (spots, vehicle) {
-  // Code here!
+
+  for (let i = 0; i < spots.length; i++) {
+    for (let j = 0; j < spots[i].length; j++) {
+      spot = spots[i][j]
+
+      switch (vehicle) {
+        case "regular":
+          if (spot === "R") {
+            return [j, i];
+          }
+          break;
+
+        case "small":
+          if (spot === "S" || spot === "R") {
+            return [j, i];
+          }
+          break;
+
+        case "motorcycle":
+          if (spot === "S" || spot === "R" || spot === "M") {
+            return [j, i];
+          }
+          break;
+        default:
+          return false;
+      }
+    }
+  }
+  return false;
 };
 
 console.log(whereCanIPark(
