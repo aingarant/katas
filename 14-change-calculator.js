@@ -17,6 +17,7 @@ const calculateChange = function (total, cash) {
   // get change amount.
   amount = cash - total;
 
+  // loop through different coins / bills.
   for (let i = 0; amount > 0 && coins.length > i; i++) {
 
     // get coin/bill
