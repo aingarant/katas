@@ -1,15 +1,25 @@
 const repeatNumbers = (numbers) => {
   result = "";
-  numbers.map((number) => {
 
-    let i = 0;
-    while (i < number[1]) {
-      result += number[0]
-      i++
+
+
+  for (let i = 0; i < numbers.length; i++) {
+
+
+    let j = 0;
+    while (j < numbers[i][1]) {
+      result += numbers[i][0]
+      j++
     }
 
     result += ", ";
-  })
+
+
+
+  }
+
+
+
   return result;
 }
 console.log(repeatNumbers([[10, 4], [34, 6], [92, 2]]));
