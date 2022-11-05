@@ -32,6 +32,7 @@ const calculateChange = function (total, cash) {
       // add response to output object
       output[coins[i].label] = change[value]
 
+      // reduce the amount by subtracting the # of bills.
       amount -= value * change[value]
     }
   }
