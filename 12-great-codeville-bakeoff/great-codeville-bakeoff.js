@@ -18,9 +18,13 @@ let recipes = [
 const chooseRecipe = (bakeryA, bakeryB, recipes) => {
   const checkStock = (ingredients) => {
     ingredients.map((ingredient) => {
+
+
+      // from here
       if (bakeryA.includes(ingredient)) {
         return true;
       }
+      // to here.
     });
   };
 
