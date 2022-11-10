@@ -15,24 +15,4 @@ let recipes = [
   },
 ];
 
-const chooseRecipe = (bakeryA, bakeryB, recipes) => {
-  const checkStock = (ingredients) => {
-    ingredients.map((ingredient) => {
-
-
-      // from here
-      if (bakeryA.includes(ingredient)) {
-        return true;
-      }
-      // to here.
-    });
-  };
-
-  recipes.map((recipe) => {
-    return checkStock(recipe.ingredients)
-      ? console.log(recipe.name)
-      : console.log("No recipes");
-  });
-};
-
 console.log(chooseRecipe(bakeryA, bakeryB, recipes));
