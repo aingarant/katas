@@ -30,9 +30,7 @@ function daySuffix(dayInput) {
   return suffix;
 }
 
-const talkingCalendar = (dateString) => {
-  const options = { month: "long" };
-
+function talkingCalendar(dateString) {
   const date = new Date(dateString);
   const [month, day, year] = [
     date.getMonth(),
@@ -40,10 +38,12 @@ const talkingCalendar = (dateString) => {
     date.getFullYear(),
   ];
 
+  monthOutput = months[month];
   dayOutput = day + daySuffix(day);
+  yearOutput = year;
 
-  console.log(months[month], dayOutput + ",", year);
-};
+  return monthOutput + " " + dayOutput + ", " + yearOutput;
+}
 
 console.log(talkingCalendar("2017/12/02"));
 console.log(talkingCalendar("2007/11/11"));
