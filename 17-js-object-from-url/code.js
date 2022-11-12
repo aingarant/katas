@@ -1,13 +1,17 @@
-// object from url
-
 const urlDecode =  (text) => {
   let output = {};
 
+  // change string using regex from & to = to make the split easier.
   text = text.replace(/&/g, '=')
   
+  // make an array from the string by splitting by =
   const textArr = text.split('=');
 
+  // iterate through newly created array
   for (let i = 0; i < textArr.length; i += 2) {
+
+    // update object from elements of array
+    // replace %20 with ' ' (space)
     output[textArr[i]] = textArr[i + 1].replace(/%20/g, ' ');
   }
 
