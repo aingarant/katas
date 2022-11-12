@@ -3,14 +3,13 @@
 const urlDecode =  (text) => {
   let output = {};
 
-  text = text.replace(/&/g, '=').replace(/%20/g, ' ');
+  text = text.replace(/&/g, '=')
   
   const textArr = text.split('=');
-  console.log(textArr)
 
-  // for (let i = 0; i < textArr.length; i += 2) {
-  //   output[textArr[i]] = textArr[i + 1];
-  // }
+  for (let i = 0; i < textArr.length; i += 2) {
+    output[textArr[i]] = textArr[i + 1].replace(/%20/g, ' ');
+  }
 
   return output;
 };

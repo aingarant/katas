@@ -1,5 +1,3 @@
-// organizing instructors
-
 const organizeInstructors = (instructors) => {
   let sorted = {};
 

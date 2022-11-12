@@ -1,12 +1,12 @@
 {
   "name": "21-number-guesser",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "code.js",
   "license": "MIT",
   "dependencies": {
     "prompt-sync": "^4.2.0"
   },
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon code.js"
   }
 }
